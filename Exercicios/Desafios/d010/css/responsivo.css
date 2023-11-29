@@ -1,0 +1,11 @@
+@media (max-width: 375px) {
+       header {
+        padding-bottom: 10px;
+       }
+}
+
+@media (max-width: 425px) {
+    header {
+     padding-bottom: 10px;
+    }
+}

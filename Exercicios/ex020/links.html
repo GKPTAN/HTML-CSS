@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* SELETORES PERSONALIZADOS
+        : -> pseudo-class
+        :: -> pseudo-elemento
+        > - filho
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: rgb(155, 10, 10);
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        a::before {
+            content: '→';
+        }
+
+        a::after {
+            content: '⬅︎';
+            text-decoration: none;
+            font-weight: normal;
+            color: black;
+        }
+
+        .especial {
+            background-color: rgb(20, 177, 177);
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/GKPTAN" target="_blank">Repositório GITHUB</a></li>
+        <li><a href="https://www.youtube.com/@CursoemVideo" target="_blank">Canal do Youtube</a></li>
+        <li><a href="https://gkptan.github.io/projeto-one-piece/" target="_blank" class="especial">Site one piece</a></li>
+    </ul>
+</body>
+</html>
