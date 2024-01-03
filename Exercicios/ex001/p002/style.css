@@ -23,5 +23,35 @@ p {
     font-size: 1.5em;
     margin-left: 1181px;
     margin-bottom: 468px;
-    
+}
+
+button {
+    margin-left: 212px;
+}
+
+dl {
+    margin-left: 852px;
+    display: block;
+}
+
+dt {
+    font-size: 1.5em;
+}
+
+dd {
+    display: initial;
+}
+
+caption {
+    font-size: 2em;
+    border: 1px solid black;
+}
+
+table {
+    width: 1105px;
+}
+
+th {
+    border: 1px solid black;
+    padding: 10px;
 }
