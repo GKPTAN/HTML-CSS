@@ -49,9 +49,20 @@ caption {
 
 table {
     width: 1105px;
+    border-collapse: collapse;
+    margin-left: 624px;
 }
 
 th {
     border: 1px solid black;
     padding: 10px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+div {
+    margin-left: 162px;
 }
