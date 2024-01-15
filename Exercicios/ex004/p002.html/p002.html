@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Exercício prático</title>
+</head>
+<body>
+    <h1>COLESTEROL ALTO</h1>
+    <p>
+        <label for="causas">Causas</label>
+        <select name="lista" id="causas" onchange="texto()">
+            <option value="op0">--- ---</option>
+            <option value="op1">Herança Genética</option>
+            <option value="op2">Estilo de vida</option>
+            <option value="op3">Alimentação Inadequada</option>
+            <option value="op4">Comorbidades</option>
+        </select>
+    </p>
+    <output id="res"></output>
+    <p>O diagnóstico para <u>colesterol alto</u> é feito a partir do <u>exame de sangue</u>, avaliando os níveis de colesterol no sangue. Se o colesterol total estiver <u>alto</u>, mas o <u>HDL for superior aos valores de referência, não há risco à saúde, pois o excesso de colesterol será eliminado pelo fígado.</u> Porém, <u>se o colesterol total estiver alto e os níveis de LDL forem maiores do que os valores de referência, há o risco de problemas cardiovasculares.</u></p>
+
+    <script>
+        function texto() {
+            let select = document.getElementById('causas')
+            let output = document.getElementById('res')
+            let opselect = select.options[select.selectedIndex].value
+            switch (opselect) {
+                case 'op1':
+                    output.textContent = "histórico de colesterol alto na família é um fator de risco importante para a condição. Nesse caso, o tratamento consiste em alterações no estilo de vida e alimentação para controle do colesterol LDL."
+                break
+                case 'op2':
+                    output.textContent = "o sedentarismo é outro fator de risco para o colesterol alto e, por isso, a prática de atividade física é essencial para reduzir os níveis de LDL no sangue. Outro fator de risco é o tabagismo."
+                break
+                case 'op3':
+                    output.textContent = "uma dieta rica em alimentos ultraprocessados e gorduras saturadas é um fator de risco importante para o colesterol alto. O ideal é inserir mais alimentos in natura ou minimamente processados na alimentação, assim como investir em alimentos ricos em gorduras boas."
+                break
+                case 'op4':
+                    output.textContent = "obesidade, diabetes e hipertensão não controlados podem levar ao aumento das quantidades de colesterol LDL no sangue."
+                break
+                case 'op0':
+                    output.textContent = ""
+                break
+            }
+        }
+    </script>
+</body>
+</html>
