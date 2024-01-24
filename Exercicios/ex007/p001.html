@@ -3,7 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Marcellus&family=Rubik+Doodle+Shadow&family=Rubik+Maps&family=Rubik+Scribble&display=swap" rel="stylesheet">
     <title>Exercício prático</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --fonth1: 'Gloria Hallelujah', cursive;
+            --fonth2: 'Marcellus', serif;
+            --fontp: 'Rubik Doodle Shadow', system-ui;
+            --fontstrong: 'Rubik Maps', system-ui;
+            --fontmark: 'Rubik Scribble', system-ui;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: var(--fonth1);
+            font-size: 3em;
+            background-color: white;
+            color: black;
+            padding: 42px 0px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            margin-left: 1px;
+            margin-bottom: 44px;
+            font-family: var(--fonth2);
+            font-size: 2em;
+        }
+
+        p {
+            margin-left: 67px;
+            margin-bottom: 38px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+
+        strong {
+            color: red;
+        }
+
+        mark {
+            background-color: orange;
+        }
+
+        select {
+            margin-left: 51px;
+            margin-bottom: 37px;
+        }     
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: green;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        img {
+            margin-bottom: 11px;
+            margin-left: 59px;
+            width: 17%;
+        }
+    </style>
 </head>
 <body>
     <h1>LUZ</h1>
@@ -30,18 +112,18 @@
     <p>"A luz já foi estudada e interpretada de diversas formas, entre algumas de suas descrições podemos ressaltar a geométrica, a ondulatória e a corpuscular."</p>
     <h2>Natureza da luz</h2>
     <p>"A natureza da luz diz respeito ao que a forma. Ao longo da história da Física, já houveram cientistas que defendiam a natureza ondulatória da luz, como Thomas Young, enquanto outros defendiam a sua natureza corpuscular, como Isaac Newton. Atualmente, após as contribuições dadas pelos físicos Max Planck e Albert Einstein, entende-se que a natureza da luz é dual, isto é: ora ela comporta-se como uma onda, ora como partícula. Esse comportamento, chamado de “dualidade onda partícula”, também é observado em outras partículas quânticas, como os prótons, nêutrons e elétrons."</p>
-    <select name="" id="">
-        <optgroup value="Características da luz">
+    <select name="luz" id="luz">
+        <optgroup label="Características da luz">
             <option value="">intensidade</option>
             <option value="">frequência</option>
             <option value="">Polarização</option>
         </optgroup>
-        <optgroup value="Fontes de luz">
+        <optgroup label="Fontes de luz">
             <option value="">Primárias</option>
             <option value="">Secundárias</option>
         </optgroup>
-    </select>
-    <a href="https://brasilescola.uol.com.br/fisica/radiacao-corpo-negro.htm">corpo negro</a>
-    <img src="luz.jpg" alt="">
+    </select> <br>
+    <p><a href="https://brasilescola.uol.com.br/fisica/radiacao-corpo-negro.htm" target="_blank" rel="external">corpo negro</a></p>
+    <img src="luz.jpg" alt="nuvens do céu iluminadas">
 </body>
 </html>
