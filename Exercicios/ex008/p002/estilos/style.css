@@ -25,6 +25,12 @@ p {
     margin-bottom: 42px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 96%;
+    margin: auto;
+}
+
 caption {
     border: 1px solid black;
     padding: 20px 0px;
@@ -36,4 +42,22 @@ th {
     border: 1px solid black;
     padding: 43px 0px;
     text-transform: uppercase;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+ul {
+    margin-left: 38px;
+    margin-bottom: 65px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+.rep {
+    margin-top: 19px;
 }
