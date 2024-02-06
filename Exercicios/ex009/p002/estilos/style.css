@@ -40,5 +40,10 @@ ol {
 }
 
 ul {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 100px;
+    margin-bottom: 44px;
+    justify-items: safe;
 }
