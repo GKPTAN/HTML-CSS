@@ -45,5 +45,43 @@ ul {
     gap: 10px;
     margin-left: 100px;
     margin-bottom: 44px;
-    justify-items: safe;
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 97px;
+    margin-bottom: 1px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 44%;
+    margin: auto;
+}
+
+.titulo {
+    border: 1px solid black;
+    padding: 10px 0px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+th {
+    border: 1px solid black;
+    padding: 5px 0px;
+    border-start-end-radius: 12px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+p {
+    margin-left: 99px;
+    margin-bottom: 16px;
 }
