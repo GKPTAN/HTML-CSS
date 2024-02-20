@@ -13,8 +13,52 @@ body {
 h1 {
     text-align: center;
     margin: 44px 0px;
+    text-transform: uppercase;
 }
 
 p {
     margin: 0px 0px 63px 18px;
+}
+
+audio {
+    margin: 0px 0px 22px 29px;
+}
+
+h6 {
+    margin: 0px 0px 48px 41px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+table > caption {
+    border: 1px solid black;
+    padding: 15px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100vh;
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+}
+
+table th {
+    border: 1px solid black;
+    padding: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
