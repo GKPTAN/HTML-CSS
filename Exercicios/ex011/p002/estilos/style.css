@@ -41,9 +41,6 @@ table > caption {
     text-transform: uppercase;
     font-weight: bold;
     width: 100vh;
-    position: sticky;
-    bottom: 0;
-    z-index: 2;
 }
 
 table th {
@@ -61,4 +58,8 @@ table td {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+select {
+    margin: 50px 0px 50px 50px;
 }
