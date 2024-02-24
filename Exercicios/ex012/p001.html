@@ -3,26 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            background-color: white;
+            color: black;
+            padding: 100px 0px;
+            width: 69%;
+            margin: auto;
+            margin-bottom: 20px;
+            border-radius: 0px 0px 97px 97px;
+            box-shadow: 0px 10px 20px #379730;
+        }
+
+        p {
+            margin: 0px 0px 58px 47px;
+        }
+
+        iframe {
+            margin-left: 53px;
+            margin-bottom: 55px;
+        }
+
+        fieldset {
+            width: 81%;
+            margin: auto;
+            margin-bottom: 15px;
+            padding: 41px;
+        }
+    </style>
     <title>Exercício Prático</title>
 </head>
 <body>
-    <h1></h1>
-    <p></p>
-    <video width="560" controls loop autoplay>
-        <source src="" type="video/mp4">
-    </video>
-    <p></p>
+    <h1>Mirtilo olho de coelho</h1>
+    <p>O mirtilo-olho-de-coelho (Vaccinium virgatum) é um arbusto frutífero, ornamental, hermafrodita e decíduo. O nome curioso dessa espécie, se deve ao fato de que os frutos ficam rosados antes da maturação completa, lembrando os olhos dos coelhos brancos. Ele cresce naturalmente em pântanos abertos, brejos, margens arenosas de lagos e riachos e bosques montanhosos do leste e sudeste dos Estados Unidos, da região que compreende os estados da Carolina do Norte até o Texas. Apresenta vários caules finos, eretos, ramificados, lenhosos, de casca descamante e marrom escura. Suas folhas são estreitas, ovaladas a elípticas, dispostas em espiral, com nervuras destacadas e sustentadas por pecíolos curtos.</p>
+    <p>Os frutos formados são do tipo baga e a maturação ocorre entre a primavera e verão. Eles são globosos, com cerca de 5mm de diâmetro, de cor azul-escuro a preto quando maduros e recobertos por uma fina camada de cera. São doces e deliciosos e podem ser consumidos in natura, ou na forma de molhos, geléias, licores e xaropes, além de serem muito usados em pães, muffins, panquecas e tortas, assim como vemos nos filmes norte-americanos. As principais cultivares dessa espécie em plantações comerciais e experimentais no Brasil são a 'Bluegem', 'Briteblue' e 'Woodard'.</p>
 
-    <h1></h1>
+    <h1>Ficha técnica</h1>
 
-    video do YouTube
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JiyyfIzu6so?si=r2xnuoJ6eiFdUYyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum animi fugit totam repellat eaque debitis soluta cumque maiores similique iste perspiciatis, minima amet sequi et! Temporibus possimus illum provident tempore?</p>
     <fieldset disabled="disabled">
-        <label for=""></label>
-        <input list="">
-        <datalist id="">
-            <option value=""></option>
+        <legend>Mirtilo-Olho-de-Coelho</legend>
+        <label for="cuidados">Cuidados:</label>
+        <input list="cuidados" id="cuidados" placeholder="pesquisar cuidados">
+        <datalist id="cuidados">
+            <option value="">Escolha do solo</option>
+            <option value="">Exposição solar</option>
+            <option value="">Rega consciente</option>
         </datalist>
     </fieldset>
 </body>
