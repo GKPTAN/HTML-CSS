@@ -10,4 +10,21 @@ h1 {
     text-align: center;
     font-size: 3em;
     margin: 54px 0px;
+    display: block;
+}
+
+h2 {
+    margin: 0px 0px 51px 42px;
+    font-size: 2em;
+}
+
+p {
+    margin: 0px 0px 61px 99px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px 0px 47px 71px;
 }
