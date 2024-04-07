@@ -28,3 +28,15 @@ ul {
     gap: 10px;
     margin: 0px 0px 47px 71px;
 }
+
+ul li {
+    background-color: #1A67AA;
+    color: white;
+    padding: 55px;
+    width: 50%;
+    user-select: none;
+}
+
+ul li::content {
+    1order
+}
