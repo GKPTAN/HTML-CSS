@@ -37,6 +37,18 @@ ul li {
     user-select: none;
 }
 
-ul li::content {
-    1order
+fieldset {
+    width: 96%;
+    margin: auto;
+    margin-bottom: 48px;
+}
+
+fieldset legend {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+picture {
+    margin-left: 55px;
 }
