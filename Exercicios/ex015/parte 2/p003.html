@@ -3,40 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/menu.css">
     <title>Exercício Prático</title>
 </head>
-<body>
+<body class="corpo">
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Últimas noticias</a></li>
-                <li><a href="#">Política</a></li>
-                <li><a href="#">Brasil</a></li>
-                <li><a href="#">Mundo</a></li>
-                <li><a href="#">Economia</a></li>
-                <li><a href="#">Sáude</a></li>
-                <li><a href="#">Cultura</a></li>
-                <li><a href="#">Esportes</a></li>
-                <li><a href="#">Opinião</a></li>
-                <li><a href="#">Colunistas e blogs</a></li>
-                <li><a href="#">Viagem</a></li>
-                <li><a href="#">Vinhos de Portugal</a></li>
-                <li><a href="#">Jogos</a></li>
-                <li><a href="#">Palavras Cruzadas</a></li>
-                <li><a href="#">Sudoku</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Fotos</a></li>
-                <li><a href="#">Infográficos</a></li>
-                <li><a href="#">Podcast</a></li>
-                <li><a href="#">Newsletter</a></li>
-                <li><a href="#">Edição Impressa</a></li>
-                <li><a href="#">Portal do assinante</a></li>
-                <li><a href="#">Acervo</a></li>
-                <li><a href="#">Princípios Editoriais</a></li>
-            </ul>
-        </nav>
+        <div class='flex'> 
+            <div class='wrapper'>
+                <div class='bun'>
+                    <div class='bigmac'>
+                        <span class='meat'>MENU</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="titulo">Sem regulação, empresas coletam dados de ondas cerebrais e já 'leem' nossa mente. Entenda o que está em jogo</h1>
     </header>
-    <h1>Sem regulação, empresas coletam dados de ondas cerebrais e já 'leem' nossa mente. Entenda o que está em jogo</h1>
+    <nav id="navegacao" class="oculto">
+        <ul>
+            <li><a href="#">Últimas noticias</a></li>
+            <li><a href="#">Política</a></li>
+            <li><a href="#">Brasil</a></li>
+            <li><a href="#">Mundo</a></li>
+            <li><a href="#">Economia</a></li>
+            <li><a href="#">Sáude</a></li>
+            <li><a href="#">Cultura</a></li>
+            <li><a href="#">Esportes</a></li>
+            <li><a href="#">Opinião</a></li>
+            <li><a href="#">Colunistas e blogs</a></li>
+            <li><a href="#">Viagem</a></li>
+            <li><a href="#">Vinhos de Portugal</a></li>
+            <li><a href="#">Jogos</a></li>
+            <li><a href="#">Palavras Cruzadas</a></li>
+            <li><a href="#">Sudoku</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Fotos</a></li>
+            <li><a href="#">Infográficos</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Edição Impressa</a></li>
+            <li><a href="#">Portal do assinante</a></li>
+            <li><a href="#">Acervo</a></li>
+            <li><a href="#">Princípios Editoriais</a></li>
+        </ul>
+    </nav>
     <h2>Oposição das universidades</h2>
     <p>O novo projeto de lei do Colorado ganhou um apoio bipartidário retumbante, mas enfrentou uma oposição externa feroz, disse Baisley, especialmente das universidades privadas.</p>
     <h2>Empresas já podem coletar ondas cerebrais e ler nossa mente; entenda</h2>
@@ -148,5 +159,6 @@
         <option value="">Obras de Aristóteles</option>
         <option value="">Frases de Aristóteles</option>
     </select>
+    <script src="js/index-compiled.js"></script>
 </body>
 </html>

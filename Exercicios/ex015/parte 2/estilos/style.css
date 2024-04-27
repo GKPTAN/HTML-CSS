@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    z-index: 0;
+}
+
+header .titulo {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    color: black;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+nav {
+    background-color: white;
+    position: absolute;
+    height: 90vh;
+    top: 10.5%;
+    padding: 15px;
+    z-index: 2;
+    overflow-y: auto;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+    font-display: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4685f1;
+    padding: 10px;
+}
+
+nav ul li a:visited {
+    color: #1E4C9A;
+}
+
+nav ul li a:hover {
+    background-color: black;
+    border-radius: 67px;
+}
+
+.oculto {
+    visibility: hidden;
+    width: 0;
+    height: 90vh;
+    top: 10.5%;
+    padding: 15px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}

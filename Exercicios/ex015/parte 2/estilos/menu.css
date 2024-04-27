@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.corpo {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+.corpo-com-bg {
+  background-color: #000000a2;
+}
+
+.wrapper {
+  background-color: white;
+  width: 208px;
+  padding: 10px 0px 25px 20px;
+}
+
+.bigmac {
+  position: absolute;
+  top: 27px;
+  left: 10px;
+  height: 6px;
+  width: 40px;
+  background-color: #9E2B25;
+  transition: background-color 100ms ease-in;
+}
+.bigmac::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  height: 6px;
+  width: 40px;
+  background-color: #9E2B25;
+  transition: all 150ms ease-in-out;
+}
+.bigmac::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  height: 6px;
+  width: 40px;
+  background-color: #9E2B25;
+  transition: all 150ms ease-in-out;
+}
+.bigmac .meat {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: -27px;
+  left: -10px;
+  font-family: "Lato", sans-serif;
+  font-size: 0em;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: #9E2B25;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 2;
+  transition: font-size 275ms ease-out;
+}
+
+.bun {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.bun:hover .bigmac {
+  background-color: transparent;
+}
+.bun:hover .bigmac .meat {
+  font-size: 1.25em;
+}
+.bun:hover .bigmac::before {
+  width: 60px;
+  left: -10px;
+  top: -22px;
+}
+.bun:hover .bigmac::after {
+  width: 60px;
+  left: -10px;
+  bottom: -22px;
+}
+
+@media screen and (max-width: 30em) {
+  .bigmac {
+    background-color: transparent;
+  }
+  .bigmac .meat {
+    font-size: 1.25em;
+  }
+  .bigmac::before {
+    width: 60px;
+    left: -10px;
+    top: -22px;
+  }
+  .bigmac::after {
+    width: 60px;
+    left: -10px;
+    bottom: -22px;
+  }
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}/*# sourceMappingURL=menu.css.map */
