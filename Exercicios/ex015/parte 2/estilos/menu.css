@@ -9,6 +9,7 @@
 
 .corpo-com-bg {
   background-color: #000000a2;
+  overflow: hidden;
 }
 
 .wrapper {
