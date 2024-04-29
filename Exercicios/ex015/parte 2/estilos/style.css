@@ -28,11 +28,12 @@ nav {
     position: absolute;
     height: 90vh;
     top: 10.5%;
+    left: 0;
     padding: 15px;
     z-index: 2;
     overflow-y: auto;
     visibility: visible;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 
 nav ul {
@@ -60,11 +61,38 @@ nav ul li a:hover {
 }
 
 .oculto {
-    visibility: hidden;
-    width: 0;
-    height: 90vh;
-    top: 10.5%;
-    padding: 15px;
-    opacity: 0;
-    transition: all 0.5s ease;
+    left: -210px;
+}
+
+h2 {
+    margin: 0px 0px 3px 11px;
+    z-index: 1;
+    display: inline-flex;
+}
+
+p {
+    margin: 0px 0px 81px 19px;
+    height: 98px;
+}
+
+.segundo-titulo {
+    margin-bottom: 21px;
+    text-align: center;
+}
+
+table caption {
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 10px 0px;
+}
+
+table th {
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 1;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 5px;
 }
