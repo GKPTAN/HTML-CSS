@@ -80,6 +80,16 @@ p {
     text-align: center;
 }
 
+.container {
+    overflow-x: auto;
+}
+
+table {
+    width: 8000px;
+    border-collapse: collapse;
+    z-index: 1;
+}
+
 table caption {
     font-size: 2em;
     border: 1px solid black;
@@ -95,4 +105,25 @@ table th {
 table td {
     border: 1px solid black;
     padding: 5px;
+}
+
+.vida {
+    background-color: chartreuse;
+}
+.campos-de-estudo {
+    background-color: aqua;
+}
+
+.obra {
+    background-color: black;
+    color: white;
+}
+
+.legado {
+    background-color: rgb(24, 24, 116);
+    color: white;
+}
+
+.potencia {
+    list-style-position: inside;
 }
