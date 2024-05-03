@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    color: darkblue;
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 87px 0px;
+    margin-bottom: 79px;
+    text-transform: uppercase;
+    visibility: inherit;
+}
+
+h2 {
+    color: darkred;
+    user-select: none;
+    margin: 0px 0px 61px 97px;
+}
+
+@counter-style roman {
+    system: 'upper-roman';
+}
+
+p {
+    text-align: justify;
+    color: white;
+    margin: 0px 0px 12px 55px;
+    counter-reset: roman;
+}
+
+p::before {
+    content: counter(roman) ". ";
+}

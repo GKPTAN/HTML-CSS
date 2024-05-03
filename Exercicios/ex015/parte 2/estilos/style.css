@@ -18,9 +18,10 @@ header .titulo {
     position: absolute;
     top: 20px;
     left: 120px;
-    color: black;
+    color: darkblue;
     margin-top: 20px;
     z-index: 3;
+    text-decoration: underline;
 }
 
 nav {
@@ -68,20 +69,24 @@ h2 {
     margin: 0px 0px 3px 11px;
     z-index: 1;
     display: inline-flex;
+    color: darkred;
 }
 
 p {
     margin: 0px 0px 81px 19px;
     height: 98px;
+    text-align: justify;
 }
 
 .segundo-titulo {
     margin-bottom: 21px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .container {
     overflow-x: auto;
+    margin-bottom: 27px;
 }
 
 table {
@@ -126,4 +131,12 @@ table td {
 
 .potencia {
     list-style-position: inside;
+}
+
+select {
+    margin: 0px 0px 15px 3px;
+}
+
+select option {
+    white-space: inherit;
 }
