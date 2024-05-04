@@ -57,52 +57,62 @@ ul {
     flex-direction: column;
     gap: 30px;
     margin: 0px 0px 66px 34px;
+    list-style-type: none;
 }
 
 ul li {
+    display: inline-block;
+    position: relative;
     user-select: unset;
     padding-bottom: 5px;
 }
 
-ul li:nth-child(1) {
-    border-bottom: 3px solid gray;
-    width: 9.5%;
-    animation: hairline-1 2s infinite;
+ul li::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    height: 3px;
 }
 
-ul li:nth-child(2) {
-    border-bottom: 3px solid orange;
-    width: 7%;
+ul li:nth-child(1)::after {
+    animation: hairline-1 1.5s infinite alternate;
+    background-color: gray;
 }
 
-ul li:nth-child(3) {
-    border-bottom: 3px solid blue;
-    width: 5.7%;
+ul li:nth-child(2)::after {
+    animation: hairline-2 1.5s infinite alternate;
+    background-color: orange;
 }
 
-ul li:nth-child(4) {
-    border-bottom: 3px solid red;
-    width: 6.1%;
+ul li:nth-child(3)::after {
+    animation: hairline-3 1.5s infinite alternate;
+    background-color: blue;
 }
 
-ul li:nth-child(5) {
-    border-bottom: 3px solid #783B1D;
-    width: 7.1%;
+ul li:nth-child(4)::after {
+    animation: hairline-4 1.5s infinite alternate;
+    background-color: red;
 }
 
-ul li:nth-child(6) {
-    border-bottom: 3px solid yellow;
-    width: 8.5%;
+ul li:nth-child(5)::after {
+   animation: hairline-5 1.5s infinite alternate;
+   background-color: #7E4123;
 }
 
-ul li:nth-child(7) {
-    border-bottom: 3px solid #00FFFF;
-    width: 6.5%;
+ul li:nth-child(6)::after {
+    animation: hairline-6 1.5s infinite alternate;
+    background-color: yellow;
 }
 
-ul li:nth-child(8) {
-    border-bottom: 3px solid darkblue;
-    width: 8.5%;
+ul li:nth-child(7)::after {
+    animation: hairline-2 1.5s infinite alternate;
+    background-color: #01F7F7;
+}
+
+ul li:nth-child(8)::after {
+    animation: hairline-8 1.5s infinite alternate;
+    background-color: darkblue;
 }
 
 @keyframes hairline-1 {
@@ -112,48 +122,114 @@ ul li:nth-child(8) {
     }
 
     50% {
-        width: 9.5%;
+        width: 4.2%;
         left: 0;
     }
 
     100% {
         width: 0.1%;
-        left: 9.5%;
+        left: 4.1%;
     }
 }
 
 @keyframes hairline-2 {
-    0% {width: 0.1%;}
+    0% {
+        width: 0.1%;
+        left: 0;
+    }
 
-    100% {width: 7%;}
+    50% {
+        width: 3%;
+        left: 0;
+    }
+
+    100% {
+        width: 0.1%;
+        left: 2.9%;
+    }
 }
 
 @keyframes hairline-3 {
-    0% {width: 0.1%;}
+    0% {
+        width: 0.1%;
+        left: 0;
+    }
 
-    100% {width: 5.7%;}
+    50% {
+        width: 2.5%;
+        left: 0;
+    }
+
+    100% {
+        width: 0.1%;
+        left: 2.4%;
+    }
 }
 
 @keyframes hairline-4 {
-    0% {width: 0.1%;}
+    0% {
+        width: 0.1%;
+        left: 0;
+    }
 
-    100% {width: 6.1%;}
+    50% {
+        width: 2.8%;
+        left: 0;
+    }
+
+    100% {
+        width: 0.1%;
+        left: 2.7%;
+    }
 }
 
 @keyframes hairline-5 {
-    0% {width: 0.1%;}
+    0% {
+        width: 0.1%;
+        left: 0;
+    }
 
-    100% {width: 7.1%;}
+    50% {
+        width: 3.2%;
+        left: 0;
+    }
+
+    100% {
+        width: 0.1%;
+        left: 3.1%;
+    }
 }
 
 @keyframes hairline-6 {
-    0% {width: 0.1%;}
+    0% {
+        width: 0.1%;
+        left: 0;
+    }
 
-    100% {width: 8.5%;}
+    50% {
+        width: 3.8%;
+        left: 0;
+    }
+
+    100% {
+        width: 0.1%;
+        left: 3.7%;
+    }
 }
 
-@keyframes hairline-7 {
-    0% {width: 0.1%;}
+@keyframes hairline-8 {
+    0% {
+        width: 0.1%;
+        left: 0;
+    }
 
-    100% {width: 6.5%;}
+    50% {
+        width: 3.9%;
+        left: 0;
+    }
+
+    100% {
+        width: 0.1%;
+        left: 3.8%;
+    }
 }
