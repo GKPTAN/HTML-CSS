@@ -233,3 +233,24 @@ ul li:nth-child(8)::after {
         left: 3.8%;
     }
 }
+
+a {
+    display: inline-block;
+    margin: 0px 0px 82px 28px;
+    text-decoration: none;
+    background-color: #B3FA1B;
+    color: #E22B1A;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:visited {
+    color: #8529FE;
+}
+
+a:hover {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #FF6200;
+}
