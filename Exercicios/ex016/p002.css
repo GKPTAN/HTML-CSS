@@ -24,7 +24,6 @@ p {
 }
 
 nav {
-    display: flex;
     width: 1351.25px;
     height: 196px;
     background-color: white;
@@ -33,7 +32,6 @@ nav {
     padding: 79px;
     margin-left: 19px;
     border-radius: 82px;
-    gap: 72px;
 }
 
 nav button {
