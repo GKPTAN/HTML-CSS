@@ -24,18 +24,20 @@ p {
 }
 
 nav {
-    width: 1351.25px;
-    height: 196px;
+    width: 90%;
+    text-align: center;
     background-color: white;
     position: absolute;
     bottom: 63px;
-    padding: 79px;
+    padding: 79px 0px;
     margin-left: 19px;
     border-radius: 82px;
+    gap: 10px;
 }
 
 nav button {
-    padding: 10px 10px;
+    margin-right: 80px;
+    padding: 10px;
     background-color: #FADB00;
     color: black;
     font-size: 14px;
@@ -46,7 +48,8 @@ nav button {
 }
 
 nav button:hover {
-    padding: 10px 5px;
+    margin-right: 90px;
+    padding: 5px;
     background-color: black;
     color: white;
     border: 1px solid black;
