@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: min-content;
+    font-variation-settings: inherit;
+}
+
+h2 {
+    margin: 10px 0px 47px 7px;
+}
+
+p {
+    margin: 0px 0px 31px 75px;
+    hyphenate-character: "\2010";
+    z-index: initial;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    left: 100px;
+    width: 28%;
+    place-self: initial initial;
+    z-index: 2;
+}
+
+aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: inherit;
+}
+
+embed {
+    margin-left: 40%;
+    z-index: unset;
+}
