@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font: italic bolder 3em Arial, Helvetica, sans-serif;
+    isolation: inherit;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+p {
+    margin: 0px 0px 6px 71px;
+    height: initial;
+}
+
+h2 {
+    font: bold 2em sans-serif;
+    margin: 0px 0px 66px 70px;
+    width: inherit;
+}
+
+label {
+    margin-left: 26px;
+}
+
+input[type="password"] {
+    margin: 0px 0px 88px 0px;
+    visibility: hidden;
+}
