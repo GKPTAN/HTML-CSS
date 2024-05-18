@@ -10,21 +10,23 @@ body {
     font: normal 16px Arial, Helvetica, sans-serif;
     text-align: left;
 
-    h1 {
+    & h1 {
         text-align: center;
         margin: 24px 0px;
     }
 
-    h2 {
+    & h2 {
         margin: 0px 61px 68px 0px;
         z-index: 2;
         text-align: right;
     }
 
-    p {
+    & p {
         margin: 0px 0px 20px 64px;
         white-space: pre;
         text-align: justify;
         text-indent: 30px;
     }
 }
+
+/* & @ : . > ~ + # [ * sinais válidos para o css nesting */
