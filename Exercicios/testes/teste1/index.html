@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .informacoes {
+            display: flex;
+            flex-direction: column;
+            margin-left: 64px;
+            width: 33%;
+            color: initial;
+            padding: 74px;
+            gap: 25px;
+            border-radius: 12px;
+            border: 1px solid black;
+
+            & .botoes {
+            margin-top: 10px;
+            display: inherit;
+            gap: 180px;
+            border: 1px solid black;
+
+            & input[type="button"] {
+                padding: 10px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: gray;
+                    padding: 5px 5px;
+                    font-size: 16px;
+                    color: white;
+                    margin: 6px 10.64px 6px 14.35px;
+                }
+            }
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Estilização de botões</h1>
+    <div class="informacoes">
+
+        <h2>informações pessoais</h2>
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome-pessoa" id="nome">
+        </div>
+        <div class="botoes">
+            <input type="button" value="adicionar pessoa">
+            <input type="button" value="ver estatisticas">
+        </div>
+    </div>
+</body>
+
+</html>
