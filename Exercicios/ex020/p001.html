@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FF8000;
+
+            & h1 {
+                background-color: #B3FA1B;
+                text-align: center;
+                padding: 31px 0px;
+                margin-bottom: 32px;
+                text-transform: uppercase;
+                font-size: 2.5em;
+            }
+
+            & p {
+                background-color: #9126FE;
+                color: white;
+                padding: 80px;
+                width: 45%;
+                margin: 0px 0px 57px 33px;
+            }
+
+            & div {
+                transition: all 0.3s ease-in-out;
+            }
+
+            & div:hover {
+                color: red;
+            }
+
+            & div > p {
+                display: none;
+                transition: all 0.3s ease-in-out;
+            }
+
+            & div:hover > p {
+                display: block;
+                color: white;
+                background-color: red;
+                width: 300px;
+            }
+            
+            & input[type="button"] {
+                position: absolute;
+                top: 128.5vh;
+                left: 27vw;
+                min-height: 30px;
+                padding: 10px;
+                font-size: 16px;
+                background-color: white;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    padding: 5px;
+                    font-size: 14px;
+                    background-color: rgb(160, 159, 159);
+                    top: 129.5vh;
+                    left: 27.5vw;
+                }
+            }
+
+            & img#imagem {
+                width: 25%;
+                margin-left: 14px;
+                margin-bottom: 80px;
+            }
+
+            & .segundo > figure > img {
+                width: 25%;
+            }
+
+            & .segundo > figure {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                & figcaption {
+                    background-color: white;
+                    padding: 5px;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ser humano foi o responsável pelas baratas estarem em todo lugar</h1>
+
+    <p>Em estudo genético das baratinhas, pesquisadores montaram linha do tempo da migração dos insetos para as cidades e descobriu culpa dos humanos em sua evolução</p>
+
+    <div>
+        <p>A baratinha, ou barata-alemã, é um inseto presente em todo o mundo, sendo uma das espécies de barata mais comuns que existem — mas, curiosamente, é ausente na natureza. Como, então, essas criaturas se aventuraram e evoluíram até habitar residências globalmente, a ponto de serem consideradas pragas?</p>
+    </div>
+
+    <p>Cientistas da Universidade do Oeste da Austrália e da Universidade de Harvard usaram DNA para resolver esse mistério — mais especificamente, envolvendo a espécie Blatella germanica (que também confere o nome barata-germânica ao animal).</p>
+
+    <input id="compartilhar" type="button" value="Compartilhar imagem">
+
+    <img id="imagem" src="pexels-ekamelev-4166388 (1).jpg" alt="uma barata em cima de uma folha" usemap="#barata">
+
+    <map name="barata">
+        <area shape="circle" coords="122,69,92" href="https://www.terra.com.br/byte/ser-humano-foi-o-responsavel-pelas-baratas-estarem-em-todo-lugar,4d876d50125d576b3a643f0096a20c1e2rzmynjp.html#:~:text=Os%20cientistas%20acreditam%20que%20a,nucleot%C3%ADdeo%20%C3%BAnico%20em%20seu%20DNA." alt="artigo sobre baratas" target="_blank">
+
+        <area shape="poly" coords="149,204,187,149,103,67" href="https://canaltech.com.br/ciencia/barata-pre-historica-preservada-em-ambar-tinha-olhos-grandes-e-habitos-diurnos-208954/" alt="artigo sobre a barata-alemã" target="_blank">
+
+        <area shape="rect" coords="28,384,32,32" href="https://canaltech.com.br/ciencia/6-bichos-que-sobreviveriam-a-uma-guerra-nuclear/" alt="artigo sobre 6 bichos que sobreviveram a uma guerra nuclear">
+    </map>
+
+    <div class="segundo">
+        <figure>
+            <img src="pexels-erik-karits-2093459-6526933 (1).jpg" alt="barata">
+
+            <figcaption>barata</figcaption>
+        </figure>
+
+        <p>Compartilham a casa do homem e sobrevivem nos mais diversos ambientes. Transmitem doenças terríveis e proliferam apesar das chineladas e dos inseticidas.</p>
+
+        <p>As seis patas espinhentas e ágeis da <u>barata</u> são capazes de transportar algo muito mais detestável do que o próprio inseto.</p>
+    </div>
+
+    <script>
+        const compartilhar = document.getElementById('compartilhar');
+        
+        compartilhar.addEventListener('click', async () => {
+            const imagem = document.getElementById('imagem');
+            const imgUrl = new URL(imagem.src, window.location.href).href;
+            const imgNome = imgUrl.split('/').pop();
+            
+            try {
+                const response = await fetch(imgUrl);
+                const imagemBlob = await response.blob();
+                const file = new File([imagemBlob], imgNome, { type: imagemBlob.type});
+                
+                if (navigator.canShare && navigator.canShare({ files: [file]})) {
+                    await navigator.share({ files: [file], title: 'Compartilhar imagem', text: 'Veja esta imagem de uma barata!',});
+                    console.log('imagem compartilhada com sucesso');
+                } else {
+                    console.log('Este navegador não suporta compartilhamento de arquivos');
+                }
+            } catch (error) {
+                console.error('Erro ao compartilhar a imagem:', error);
+            };
+        });
+    </script>
+</body>
+</html>
