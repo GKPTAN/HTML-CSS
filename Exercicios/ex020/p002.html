@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #6B6B6B;
+            color: white;
+
+            & .titulo {
+                text-align: center;
+                background-color: #84B7E9;
+                color: black;
+                padding: 54px 0px;
+                margin-bottom: 70px;
+            }
+
+            & .links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 0px 0px 77px 67px;
+                background-color: white;
+                list-style-position: inside;
+                color: black;
+                padding: 42px;
+                width: 32vw;
+                border-radius: 80px;
+
+                & li > .link {
+                    color: red;
+                    text-decoration: none;
+                    font-weight: bold;
+
+                    &:visited {
+                        color: rgb(155, 10, 10);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: black;
+                    }
+
+                    &:active {
+                        color: yellow;
+                    }
+
+                    &::before {
+                        content: "→ ";
+                    }
+
+                    &::after {
+                        content: '⬅︎';
+                        text-decoration: none;
+                        font-weight: normal;
+                        color: black;
+                    }
+                }
+            }
+
+            & img {
+                display: block;
+                margin: auto;
+                margin-bottom: 44px;
+            }
+
+            & .especial {
+                background-color: rgb(20, 177, 177);
+                color: black;
+                font-weight: 700;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 7px;
+                margin: 0px 0px 78px 29px;
+                width: 56vw;
+                border-radius: 9px;
+                text-align: justify;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Albert Einstein</h1>
+
+    <ul class="links">
+        <li><a class="link" href="https://pt.wikipedia.org/wiki/Albert_Einstein" target="_blank">Albert Einstein - wikipédia</a></li>
+        <li><a class="link" href="https://pt.wikipedia.org/wiki/Relatividade_geral" target="_blank">Teoria da Relatividade Geral</a></li>
+        <li><a class="link" href="https://pt.wikipedia.org/wiki/Mec%C3%A2nica_qu%C3%A2ntica" target="_blank">Mecânica Quântica</a></li>
+    </ul>
+
+    <audio src="../ex011/midia/mexico-ramzoid.mp3"></audio>
+
+    <img src="albert-einstein.webp" alt="Albert Einstein">
+
+    <dl class="especial">
+        <dt>Efeito Fotoelétrico</dt>
+        <dd>O efeito fotoelétrico é a emissão de elétrons por um material, geralmente metálico, quando exposto a uma radiação eletromagnética (como a luz) de frequência suficientemente alta, que depende do material, como por exemplo a radiação ultravioleta. Ele pode ser observado quando a luz incide numa placa de metal, arrancando elétrons da placa. Os elétrons ejetados são denominados fotoelétrons.</dd>
+    </dl>
+</body>
+</html>
