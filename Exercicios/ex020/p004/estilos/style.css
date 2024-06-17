@@ -8,6 +8,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 h1 {
@@ -46,4 +47,28 @@ div:hover > p {
     font-size: 16px;
 }
 
-/* parei aqui */
+aside {
+    position: absolute;
+    right: 12%;
+}
+
+img {
+    width: 17vw;
+    margin: 0px 0px 92px 56px;
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 43px;
+}
+
+dl > dt {
+    margin-left: 64px;
+}
+
+dl > dd {
+    margin-left: 78px;
+    initial-letter-align: unset;
+}
