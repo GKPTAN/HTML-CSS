@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    display: inline-block;
+    background-color: lightgray;
+    border: 1px solid black;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    margin: 14px 0px 40px 31px;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+div:hover {
+    background-color: yellow;
+}
+
+hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    nav-index: auto;
+    margin: 0px 0px 33px 0px;
+}
+
+hgroup > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+hgroup > h2 {
+    margin-left: 67px;
+}
+
+/* parei aqui */
