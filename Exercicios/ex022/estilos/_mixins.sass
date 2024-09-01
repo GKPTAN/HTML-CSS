@@ -1,0 +1,14 @@
+@use 'variables'
+
+@mixin box()
+    margin: 0px 0px variables.$margin variables.$margin
+    
+@mixin container()
+    margin: 0px 0px variables.$margin variables.$margin
+    padding: variables.$padding
+    border-radius: variables.$border-radius
+
+@mixin bg-image($img)
+    background-image: url('../imagens/#{$img}')
+    background-size: 100%
+    background-repeat: no-repeat
