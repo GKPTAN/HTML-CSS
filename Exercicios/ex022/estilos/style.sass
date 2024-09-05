@@ -22,4 +22,51 @@ body
         background-color: variables.$bg-color-one
     #q2
         background: linear-gradient(to bottom, #000, #004A85)
+    #q3
+        @include mixins.bg-image('cidade.jpg')
+    div.bloco  
+        height: 200px
+        border: 1px solid variables.$border-color-two  
+        margin: variables.$margin  
+        border-radius: variables.$border-radius 
+        @include mixins.bg-image('folha.jpg')
+    #q4
+        background-position: left top
+    #q5
+        background-position: left center
+    #q6
+        background-position: right bottom
+    #q7
+        background-position: center center
+    main
+        background-color: variables.$bg-color-two
+        max-width: 400px
+        padding: variables.$padding
+        margin: auto
+        margin-bottom: 30px
+        border: 1px solid variables.$primary-color
+        border-radius: variables.$border-radius
+        p
+            margin-bottom: 20px
+    #container
+        position: relative
+        height: 96vh
+        background-color: variables.$bg-color-tree
+        padding: variables.$padding
+        #conteudo
+            height: 200px
+            width: 400px
+            background-color: variables.$bg-color-four
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+    dl
+        width: 16%
+        @include mixins.container()
+        dt
+            margin-bottom: 20px
+        dd
+            margin-left: 30px
+            z-index: 2
             

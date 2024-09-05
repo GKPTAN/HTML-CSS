@@ -24,4 +24,70 @@ body #q1 {
 }
 body #q2 {
   background: linear-gradient(to bottom, #000, #004A85);
+}
+body #q3 {
+  background-image: url("../imagens/cidade.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+body div.bloco {
+  height: 200px;
+  border: 1px solid #00f;
+  margin: 30px;
+  border-radius: 20px;
+  background-image: url("../imagens/folha.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+body #q4 {
+  background-position: left top;
+}
+body #q5 {
+  background-position: left center;
+}
+body #q6 {
+  background-position: right bottom;
+}
+body #q7 {
+  background-position: center center;
+}
+body main {
+  background-color: #87ceeb;
+  max-width: 400px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 30px;
+  border: 1px solid #E62118;
+  border-radius: 20px;
+}
+body main p {
+  margin-bottom: 20px;
+}
+body #container {
+  position: relative;
+  height: 96vh;
+  background-color: #800080;
+  padding: 20px;
+}
+body #container #conteudo {
+  height: 200px;
+  width: 400px;
+  background-color: #ff0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+body dl {
+  width: 16%;
+  margin: 0px 0px 30px 30px;
+  padding: 20px;
+  border-radius: 20px;
+}
+body dl dt {
+  margin-bottom: 20px;
+}
+body dl dd {
+  margin-left: 30px;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */
