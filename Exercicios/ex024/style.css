@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    background-color: green;
+    text-align: center;
+    padding: 30px 0px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+p {
+    background-color: #007700;
+    padding: 30px;
+    margin: 0px 0px 30px 30px;
+    width: 95%;
+    border-radius: 15px;
+    user-select: unset;
+}
+
+.teste {
+    margin: 0px 0px 30px 35%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #0A6381;
+    margin: 0px 0px 30px 30px;
+    padding: 30px;
+    border-radius: 15px;
+    width: 83%;
+}
+
+ul > li > a {
+    color: #f0785d;
+    text-decoration: none;
+}
+
+ul > li > a:hover {
+    text-decoration: underline;
+}
+
+ul > li > a:visited {
+    color: #796621;
+}
+
+.bird {
+    display: block;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.terceiro {
+    display: block;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.clique {
+    display: block;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin: 0px 0px 30px 60px;
+}
+
+div {
+    margin-bottom: 30px;
+}
+
+.special {
+    text-align: center;
+}
+
+.mapa-google {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.mapa-waze {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
