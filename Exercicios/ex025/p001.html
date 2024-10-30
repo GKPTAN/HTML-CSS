@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático</title>
+</head>
+<body>
+    <h1>Futebol</h1>
+    <form action="cadastro.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <p><label for="gname">Nome do jogador: </label> <input type="text" name="name" id="gname" required minlength="5" maxlength="15" size="16" placeholder="coloque o nome..." autocomplete="username"></p>
+
+        <p><label for="gtime">Time: </label> <input type="text" name="time" id="gtime"></p>
+
+        <p>
+            <label for="gsenha">Senha: </label>
+            <input type="password" name="senha" id="gsenha" required minlength="8" maxlength="20" size="11" placeholder="coloque a senha..." autocomplete="current-password">
+        </p>
+
+        <p>
+            <label for="gidade">Idade: </label>
+            <input type="number" name="idade" id="gidade" min="0" max="10" placeholder="1 a 100" required>
+        </p>
+
+        <p>
+            <label for="gmes">Mês de nascimento: </label>
+            <input type="month" name="mes" id="gmes">
+        </p>
+
+        <p>
+            <label for="gdata">Data de Nascimento</label>
+            <input type="date" name="data" id="gdata">
+        </p>
+
+        <p>
+            <label for="ghora">Hora do jogo</label>
+            <input type="time" name="hora" id="ghora" value="16:00">
+        </p>
+
+        <fieldset>
+            <legend>Times</legend>
+            <p>
+                <label for="tnome">Nome do time: </label>
+                <input type="text" name="nome" id="tnome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="temail">E-mail de contato: </label>
+                <input type="email" name="email" id="temail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="gtel">Número de contato: </label>
+                <input type="tel" name="tel" id="gtel" autocomplete="tel" required pattern="^\(\d{2}\)\d{5}-\d{4}$">
+            </p>
+
+            <input type="checkbox" name="esfut" id="iesfut" checked> <label for="iesfut">Futebol</label> <br> 
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label>
+        </fieldset>
+        <p>
+            <label for="tcor">Cor do time: </label>
+            <input type="color" name="cor" id="tcor">
+        </p>
+
+        <p>
+            <label for="tfoto">Foto do escudo do time: </label>
+            <input type="file" name="foto" id="tfoto">
+        </p>
+
+        <p>
+            <label for="tliga">liga: </label>
+            <select name="liga" id="tliga">
+                <option value="">--- selecionar liga ---</option>
+                <optgroup label="ligas">
+                    <option value="BR">Brasileirão</option>
+                    <option value="FR">Ligue 1</option>
+                    <option value="IT">Serie A</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="gtimes">times: </label>
+            <input type="text" name="times" id="gtimes" list="tliga">
+            <datalist id="tliga">
+                <option value="FLA">Flamengo</option>
+                <option value="PSG">PSG</option>
+                <option value="INT">Inter</option>
+                <option value="BOT">Botafogo</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="tmsg">enviar mensagem para o time: </label> <br>
+            <textarea name="msg" id="tmsg" cols="30" rows="10"></textarea>
+        </p>
+
+        <p>
+            <label for="in1">Número 1:</label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="in2">Número 2:</label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="isoma">Soma</label>
+            <output name="soma" id="isoma">0:</output>
+        </p>
+
+        <p>
+            <label for="inum">Número:</label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
+        </p>
+
+        <p>
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2023" oninput="calcIdade()">
+        </p>
+    
+        <p>
+            <label for="iidade">Qual a sua idade?</label>
+            <output id="iidade">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+
+    c
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+</body>
+</html>
