@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Exercício Prático</title>
+</head>
+<body>
+    <header>
+        <h1>Cientistas descobrem metal que se remenda sozinho, fenômeno de ‘auto cicatrização’ em metal, que pode inaugurar nova era da engenharia</h1>
+
+        <span id="menu" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+
+        <menu>
+            <ul>
+                <li>Vagas de emprego</li>
+                <li>Indústria</li>
+                <li>Automotivo</li>
+            </ul>
+        </menu>
+
+        <menu id="options">
+            <ul>
+                <li><a href="#">Ciência e Tecnologia</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Economia</a></li>
+                <li><a href="#">Logistica e Transporte</a></li>
+                <li><a href="#">Sites parceiros</a></li>
+            </ul>
+        </menu>
+    </header>
+    
+    <main>
+        <article>
+            <h2>Nova era da engenharia com a descoberta do metal que se remenda sozinho
+            </h2>
+
+            <p>Brad Boyce, cientista de materiais que lidera o estudo, expressou surpresa ao presenciar esse comportamento no metal. “Foi absolutamente impressionante observar isso em primeira mão”, relatou Boyce. Ele e sua equipe acreditam que, se essa “auto cicatrização” for compreendida e controlada, a descoberta pode marcar o início de uma nova era da engenharia, com aplicações que vão de pontes a motores e dispositivos eletrônicos, aumentando a durabilidade e a resiliência de estruturas metálicas.</p>
+
+            <p>No campo da metalurgia, a tendência é projetar materiais que previnam ou desacelerem a expansão de trincas, pois se presume que a formação de fissuras seja irreversível. No entanto, essa nova observação abre a possibilidade de uma abordagem completamente diferente. “A premissa de que as trincas por fadiga podem cicatrizar de forma autônoma em metais desafia as teorias mais fundamentais sobre como os engenheiros projetam e avaliam a vida útil por fadiga em materiais estruturais”, afirmam os autores do estudo do metal que se remenda sozinho.</p>
+
+            <p>Uma explicação possível para o fenômeno é um processo conhecido como “soldagem a frio”, em que superfícies metálicas muito próximas podem se unir em temperaturas ambientes, devido ao emaranhamento de átomos. Embora esse fenômeno seja mais comum em condições específicas, o fato de ocorrer em temperatura ambiente durante o experimento no metal torna a descoberta especialmente promissora.</p>
+        </article>
+    </main>
+
+    <main>
+        <article>
+            <h2>Profundoscópio, o microscópio que promete revolucionar a neurociência</h2>
+
+            <p>Pesquisadores da Universidade de Cornell, nos EUA, desenvolveram uma tecnologia avançada de microscopia que permite uma visualização de campo profunda e ampla simultaneamente, permitindo uma visualização direta sem precedentes da atividade cerebral, com uma resolução de célula única.</p>
+
+            <p>O microscópio inovador, que a equipe batizou de "profundoscópio" (Deepscope), combina técnicas de microscopia de dois e de três fótons para capturar a atividade neural em larga escala e com detalhes estruturais até agora inacessíveis.</p>
+
+            <p>A microscopia multifótons tradicional, o estado da arte para fazer imagens de tecidos profundos, tem limitações significativas na profundidade da imagem e no campo de visão, especialmente em tecidos biológicos altamente dispersos, como o cérebro. Para evitar danos térmicos ao tecido que está sendo observado, sempre que se tenta aumentar a profundidade da imagem é necessário sacrificar o campo de visão em uma magnitude muito maior - o campo de visão reduz-se exponencialmente - tornando desafiador observar redes neuronais em larga escala.</p>
+        </article>
+    </main>
+    
+    <main>
+        <img id="pc" src="imagens/icon-pc.png" alt="Versão para Desktop">
+        <img id="phone" src="imagens/icon-phone.png" alt="Versão para Smartphone">
+        <img id="print" src="imagens/icon-print.png" alt="Versão via Impressora">
+        <img id="tablet" src="imagens/icon-tablet.png" alt="Versão para Tablet">
+        <img id="tv" src="imagens/icon-tv.png" alt="Versão para TV">
+    </main>
+
+    <label for="img-notebook">Notebook</label>
+    <input type="checkbox" name="notebook" id="img-notebook">
+    <label for="img-telefone">Telefone</label>
+    <input type="checkbox" name="telefone" id="img-telefone">
+    <label for="img-impressora">Impressora</label>
+    <input type="checkbox" name="impressora" id="img-impressora">
+    <label for="img-tablet">Tablet</label>
+    <input type="checkbox" name="tablet" id="img-tablet">
+    <label for="img-notebook">Monitor</label>
+    <input type="checkbox" name="monitor" id="img-monitor">
+
+    <script>
+        function clickMenu() {
+            if (options.style.display == 'block') {
+                options.style.display = 'none'
+            } else {
+                options.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                options.style.display = 'block'
+            } else {
+                options.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
