@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #e6e8f1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            display: flex;
+            flex-flow: row nowrap;
+            margin-bottom: 30px;
+            justify-content: space-between;
+        }
+        header .menu{
+            background-color: black;
+            color: white;
+            text-align: center;
+            width: 77px;
+            height: 77px;
+        }
+        header .navbar{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: white;
+            width: 384px;
+            height: 546px;
+            align-items: center;
+        }
+        header .navbar .sections{
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .sections li {
+            background-color: gold;
+            color: black;
+            width: 55%;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">A</div>
+        <div class="logo">
+            <h1>academia</h1>
+            <p>parademia</p>
+        </div>
+        <nav class="navbar">
+            <ul class="sections">
+                <li class=".opening-hours">horário</li>
+                <li>Posts</li>
+                <li>Dúvidas</li>
+                <li>Artigos</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="genero">
+        <div class="homem">homem</div>
+        <div class="mulher">mulher</div>
+    </section>
+</body>
+</html>
