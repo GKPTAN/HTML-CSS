@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&family=Voces&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         *{
@@ -11,71 +14,171 @@
             box-sizing: border-box;
         }
         body{
+            position: relative;
             background-color: #e6e8f1;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Urbanist", serif;
+            width: 100vw;
+            height: 100vh;
         }
-        header{
-            display: flex;
-            flex-flow: row nowrap;
-            margin-bottom: 30px;
-            justify-content: space-between;
+        .sign_up{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #20079b;
+            padding: 2rem;
+            border-radius: 30px;
         }
-        header .menu{
-            background-color: black;
-            color: white;
+        .sign_up h1{
             text-align: center;
-            width: 77px;
-            height: 77px;
+            margin-bottom: 2rem;
+            color: white;
+            font-family: "Voces", serif;
         }
-        header .navbar{
-            background-color: black;
+        .sign_up form{
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 30px;
             color: white;
-            width: 384px;
-            height: 546px;
-            align-items: center;
         }
-        header .navbar .sections{
+        .sign_up form input{
             width: 100%;
-            height: 100%;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-            justify-content: space-evenly;
+            margin-top: 10px;
+            padding: 10px 5px; 
+            border-radius: 10px;
+            font-size: 18px;
         }
-        .sections li {
-            background-color: gold;
-            color: black;
-            width: 55%;
-            padding: 1rem;
-            text-align: center;
-            border-radius: 15px;
+        .sign_up form .gender input{
+            width: unset;
+            cursor: pointer;
+        }
+        .sign_up form .password input{
+            margin-bottom: 10px;
+        }
+        .sign_up form input[type="submit"] {
+            cursor: pointer;
+            background-color: #ebe5e8;
+            transition: all 0.3s ease-in-out;
+        }
+        .sign_up form input[type="submit"]:hover{
+            background-color: #97f7ba;
+        }
+        .sign_up form .email{
+            position: relative;
+        }
+        .sign_up form .password{
+            position: relative;
+        }
+        .aviso{
+            position: absolute;
+            left: 1%;
+            top: 110%;
+            opacity: 1;
+            font-size: 14px;
+            color: red;
+        }
+        .hidden{
+            opacity: 0;
+        }
+        .olho{
+            position: absolute;
+            top: 25%;
+            left: 95%;
+            cursor: pointer;
+        }
+        .olho-2{
+            position: absolute;
+            top: 75%;
+            left: 95%;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="menu">A</div>
-        <div class="logo">
-            <h1>academia</h1>
-            <p>parademia</p>
-        </div>
-        <nav class="navbar">
-            <ul class="sections">
-                <li class=".opening-hours">horário</li>
-                <li>Posts</li>
-                <li>Dúvidas</li>
-                <li>Artigos</li>
-            </ul>
-        </nav>
-    </header>
-    <section class="genero">
-        <div class="homem">homem</div>
-        <div class="mulher">mulher</div>
-    </section>
+    <div class="sign_up">
+        <h1>Registra-se</h1>
+        <form action="dados.php" method="post" onsubmit="return validarForm()">
+            <div class="name">
+                <label for="name">Nome: </label>
+                <input type="text" name="names" id="name" placeholder="Digite o seu nome..." autocomplete="name" required>
+            </div>
+            <div class="age">
+                <label for="age">Idade: </label>
+                <input type="number" name="ages" id="age" min="0" placeholder="Digite a sua idade..." required>
+            </div>
+            <div class="gender">
+                <span>Sexo:</span>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="genres" id="masc" value="Masculino" required>
+                <label for="fem">Feminino</label>
+                <input type="radio" name="genres" id="fem" value="Feminino" required>
+            </div>
+            <div class="email">
+                <label for="email">E-mail: </label>
+                <input type="email" name="emails" id="email" placeholder="Digite o seu e-mail..." autocomplete="email" required>
+                <span id="aviso" class="aviso hidden">Formato de e-mail inválido!</span>
+            </div>
+            <div class="password">
+                <label for="password">senha: </label>
+                <input type="password" name="passwords" id="password" placeholder="Digite a sua senha..." minlength="6" maxlength="15" required>
+                <img class="olho" src="esconder.svg" alt="revelar senha e esconder senha">
+                <label for="confirm_password">confirme sua senha: </label>
+                <input type="password" name="passwords" id="confirm_password" placeholder="Confirme a sua senha..." minlength="6" maxlength="15" required>
+                <img class="olho-2" src="esconder.svg" alt="revelar senha e esco nder senha">
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <script>
+        const olho1 = document.getElementsByClassName('olho')[0];
+        olho1.addEventListener('click', () => {
+            olho1.src = olho1.src.includes('esconder.svg') ? 'revelar.svg' : 'esconder.svg';
+            const password1 = document.getElementById('password');
+            if (password1.type === "password") {
+                password1.type = "text";
+            } else {
+                password1.type = "password";
+            };
+        });
+        const olho2 = document.getElementsByClassName('olho-2')[0];
+        olho2.addEventListener('click', () => {
+            olho2.src = olho2.src.includes('esconder.svg') ? 'revelar.svg' : 'esconder.svg';
+            const password2 = document.getElementById('confirm_password');
+            if (password2.type === "password") {
+                password2.type = "text";
+            } else {
+                password2.type = "password";
+            };
+        });
+        function validarForm() {
+            const email = document.getElementById('email').value;
+            const aviso = document.getElementById('aviso');
+            const senha = document.getElementById('password');
+            const passwordConfirm = document.getElementById('confirm_password');
+            let valido = true;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            if(!regex.test(email)) {
+                aviso.classList.remove('hidden');
+                valido = false;
+            } else {
+                aviso.classList.add('hidden');
+            }
+
+            if (senha.value !== passwordConfirm.value) {
+                passwordConfirm.setCustomValidity("Senhas não coincidem, por favor, confirme sua senha!");
+                passwordConfirm.reportValidity();
+                valido = false;
+            } else {
+                passwordConfirm.setCustomValidity("");
+            };
+
+            document.getElementById("confirm_password").addEventListener('input', function() {
+                this.setCustomValidity("");
+            });
+
+            return valido;
+        };
+    </script>
 </body>
 </html>
