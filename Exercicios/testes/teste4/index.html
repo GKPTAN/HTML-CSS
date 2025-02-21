@@ -63,19 +63,8 @@
         .sign_up form input[type="submit"]:hover{
             background-color: #97f7ba;
         }
-        .sign_up form .email{
-            position: relative;
-        }
         .sign_up form .password{
             position: relative;
-        }
-        .aviso{
-            position: absolute;
-            left: 1%;
-            top: 110%;
-            opacity: 1;
-            font-size: 14px;
-            color: red;
         }
         .hidden{
             opacity: 0;
@@ -100,11 +89,11 @@
         <form action="dados.php" method="post" onsubmit="return validarForm()">
             <div class="name">
                 <label for="name">Nome: </label>
-                <input type="text" name="names" id="name" placeholder="Digite o seu nome..." autocomplete="name" required>
+                <input type="text" name="names" id="name" placeholder="Digite o seu nome..." minlength="3" maxlength="255" autocomplete="name" required>
             </div>
             <div class="age">
                 <label for="age">Idade: </label>
-                <input type="number" name="ages" id="age" min="0" placeholder="Digite a sua idade..." required>
+                <input type="number" name="ages" id="age" min="12" placeholder="Digite a sua idade..." required>
             </div>
             <div class="gender">
                 <span>Sexo:</span>
@@ -115,8 +104,7 @@
             </div>
             <div class="email">
                 <label for="email">E-mail: </label>
-                <input type="email" name="emails" id="email" placeholder="Digite o seu e-mail..." autocomplete="email" required>
-                <span id="aviso" class="aviso hidden">Formato de e-mail inválido!</span>
+                <input type="email" name="emails" id="email" placeholder="Digite o seu e-mail..." maxlength="255" autocomplete="email" required>
             </div>
             <div class="password">
                 <label for="password">senha: </label>
@@ -130,55 +118,6 @@
         </form>
     </div>
 
-    <script>
-        const olho1 = document.getElementsByClassName('olho')[0];
-        olho1.addEventListener('click', () => {
-            olho1.src = olho1.src.includes('esconder.svg') ? 'revelar.svg' : 'esconder.svg';
-            const password1 = document.getElementById('password');
-            if (password1.type === "password") {
-                password1.type = "text";
-            } else {
-                password1.type = "password";
-            };
-        });
-        const olho2 = document.getElementsByClassName('olho-2')[0];
-        olho2.addEventListener('click', () => {
-            olho2.src = olho2.src.includes('esconder.svg') ? 'revelar.svg' : 'esconder.svg';
-            const password2 = document.getElementById('confirm_password');
-            if (password2.type === "password") {
-                password2.type = "text";
-            } else {
-                password2.type = "password";
-            };
-        });
-        function validarForm() {
-            const email = document.getElementById('email').value;
-            const aviso = document.getElementById('aviso');
-            const senha = document.getElementById('password');
-            const passwordConfirm = document.getElementById('confirm_password');
-            let valido = true;
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-            if(!regex.test(email)) {
-                aviso.classList.remove('hidden');
-                valido = false;
-            } else {
-                aviso.classList.add('hidden');
-            }
-
-            if (senha.value !== passwordConfirm.value) {
-                passwordConfirm.setCustomValidity("Senhas não coincidem, por favor, confirme sua senha!");
-                passwordConfirm.reportValidity();
-                valido = false;
-            } else {
-                passwordConfirm.setCustomValidity("");
-            };
-
-            document.getElementById("confirm_password").addEventListener('input', function() {
-                this.setCustomValidity("");
-            });
-
-            return valido;
-        };
-    </script>
+    <script src="cadastro.js"></script>
 </body>
 </html>
