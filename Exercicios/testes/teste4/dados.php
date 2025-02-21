@@ -5,7 +5,7 @@ function validarInput($name) {
     }
 }
 
-
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = $_POST['names'];
     $validação = validarInput($name);
     if ($validação === true) {
@@ -13,4 +13,5 @@ function validarInput($name) {
     } else {
         echo "Erro: ", $validação;
     }
+}
 ?>
