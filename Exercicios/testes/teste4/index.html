@@ -25,21 +25,22 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #20079b;
+            border-radius: 50px;
+            background: #e6e8f1;
+            box-shadow:  41px 41px 82px #c0c1c7, -41px -41px 82px #f6f8ff;
+            border: 1px solid #c0c1c738;
             padding: 2rem;
             border-radius: 30px;
         }
         .sign_up h1{
             text-align: center;
             margin-bottom: 2rem;
-            color: white;
             font-family: "Voces", serif;
         }
         .sign_up form{
             display: flex;
             flex-direction: column;
             gap: 30px;
-            color: white;
         }
         .sign_up form input{
             width: 100%;
@@ -47,6 +48,7 @@
             padding: 10px 5px; 
             border-radius: 10px;
             font-size: 18px;
+            border: none;
         }
         .sign_up form .gender input{
             width: unset;
@@ -57,7 +59,7 @@
         }
         .sign_up form input[type="submit"] {
             cursor: pointer;
-            background-color: #ebe5e8;
+            background-color: #ffffff;
             transition: all 0.3s ease-in-out;
         }
         .sign_up form input[type="submit"]:hover{
@@ -86,7 +88,7 @@
 <body>
     <div class="sign_up">
         <h1>Registra-se</h1>
-        <form action="dados.php" method="post" onsubmit="return validarForm()">
+        <form action="http://localhost/processar_dados.php" method="post" onsubmit="return validarForm()">
             <div class="name">
                 <label for="name">Nome: </label>
                 <input type="text" name="names" id="name" placeholder="Digite o seu nome..." minlength="3" maxlength="255" autocomplete="name" required>
@@ -108,10 +110,10 @@
             </div>
             <div class="password">
                 <label for="password">senha: </label>
-                <input type="password" name="passwords" id="password" placeholder="Digite a sua senha..." minlength="6" maxlength="15" required>
+                <input type="password" name="password_user" id="password" placeholder="Digite a sua senha..." minlength="6" maxlength="15" required>
                 <img class="olho" src="esconder.svg" alt="revelar senha e esconder senha">
                 <label for="confirm_password">confirme sua senha: </label>
-                <input type="password" name="passwords" id="confirm_password" placeholder="Confirme a sua senha..." minlength="6" maxlength="15" required>
+                <input type="password" name="password_conf" id="confirm_password" placeholder="Confirme a sua senha..." minlength="6" maxlength="15" required>
                 <img class="olho-2" src="esconder.svg" alt="revelar senha e esco nder senha">
             </div>
             <input type="submit" value="Enviar">
