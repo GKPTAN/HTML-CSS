@@ -1,0 +1,97 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* Seção Banner */
+.banner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner .content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.highlight {
+    color: orange;
+}
+
+.green {
+    color: #64e4b0;
+}
+
+/* Seção Texto */
+.section-text {
+    padding: 50px 20px;
+    background: #000;
+}
+
+.section-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.orange {
+    color: orange;
+}
+
+/* Planos */
+.plans {
+    background: #eee;
+    color: black;
+    padding: 50px 20px;
+}
+
+.plans h2 {
+    font-size: 2.5rem;
+}
+
+.plans .buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.btn.orange {
+    background: orange;
+    color: black;
+}
+
+.btn.red {
+    background: red;
+    color: white;
+}
