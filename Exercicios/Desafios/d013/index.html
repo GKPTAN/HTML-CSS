@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        .calculadora {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-left: 2rem;
+        }
+        .calculadora form {
+            width: 30%;
+        }
+        .calculadora form div.exp {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+        }
+        .calculadora form div.exp input {
+            padding: 5px;
+        }
+        .calculadora form div.exp span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5%;
+        }
+        .calculadora form div.exp output {
+            padding: 5px;
+        }
+        .calculadora form div.options {
+            display: flex;
+            justify-content: space-between;
+        }
+        .calculadora form div.options button {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            background-color: green;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .calculadora form div.options button:hover {
+            background-color: #43a09d !important;
+        }
+        .calculadora form div.options button:nth-child(1) {
+            background-color: #3a405a;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .calculadora form div.options button:nth-child(2) {
+            background-color: #f9dec9;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: black;
+        }
+        .calculadora form div.options button:nth-child(3) {
+            background-color: #99b2dd;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: black;
+        }
+        .calculadora form div.options button:nth-child(4) {
+            background-color: #685044;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main class="principal">
+        <section class="calculadora">
+            <h1>CALCULADORA</h1>
+            <form>
+                <div class="exp">
+                    <input type="number" name="number1" id="number1">
+                    <span class="operation" id="operation">+</span>
+                    <input type="number" name="number2" id="number2"> =
+                    <output id="saida">0</output>
+                </div>
+                <div class="options">
+                    <button type="button" onclick="operation(this.textContent)">+</button>
+                    <button type="button" onclick="operation(this.textContent)">-</button>
+                    <button type="button" onclick="operation(this.textContent)">x</button>
+                    <button type="button" onclick="operation(this.textContent)">÷</button>
+                    <button type="submit" onclick="verResultado(event)">Ver resultado</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
